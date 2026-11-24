@@ -1,4 +1,6 @@
+using CpaClientManager.Core.Models;
 using Microsoft.Extensions.DependencyInjection;
+using OrchardCore.ContentManagement;
 using OrchardCore.Data.Migration;
 using OrchardCore.Modules;
 
@@ -8,6 +10,9 @@ public sealed class Startup : StartupBase
 {
     public override void ConfigureServices(IServiceCollection services)
     {
+        // Makes the C#-class ClientPart known to Orchard as a content part
+        services.AddContentPart<ClientPart>();
+
         // Registers the migration that creates the "Client" content type.
         services.AddDataMigration<Migrations>();
     }
