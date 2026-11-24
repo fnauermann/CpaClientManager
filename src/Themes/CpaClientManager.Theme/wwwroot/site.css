@@ -1,0 +1,41 @@
+:root {
+    --brand: #1f4e79;
+    --background: #f6f7f9;
+    --text: #1d2733;
+    --muted: #66707c;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-header {
+    background: var(--brand);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main.container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 1.5rem 0;
+}

@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CpaClientManager.Web/CpaClientManager.Web.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/">
+    <Project Path="src/Modules/CpaClientManager.Core/CpaClientManager.Core.csproj" />
+  </Folder>
+  <Folder Name="/src/Themes/">
+    <Project Path="src/Themes/CpaClientManager.Theme/CpaClientManager.Theme.csproj" />
+  </Folder>
+</Solution>

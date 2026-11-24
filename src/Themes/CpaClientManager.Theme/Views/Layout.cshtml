@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="@Orchard.CultureName()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@RenderTitleSegments(Site.SiteName, "before")</title>
+
+    <resources type="Header" />
+
+    <style asp-src="~/CpaClientManager.Theme/site.css"></style>
+    <resources type="HeadScript" />
+    <resources type="Stylesheet" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">@Site.SiteName</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        @await DisplayAsync(ThemeLayout.Zones["Messages"])
+        @await RenderBodyAsync()
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; @DateTime.Now.Year &ndash; @Site.SiteName</p>
+    </footer>
+
+    <resources type="FootScript" />
+</body>
+</html>
