@@ -29,4 +29,15 @@ public sealed class ClientPartDisplayDriver : ContentPartDisplayDriver<ClientPar
         
         return Edit(part, context);
     }
+
+    public override IDisplayResult Display(ClientPart part, BuildPartDisplayContext context)
+    {
+        return Initialize<ClientPartViewModel>(GetDisplayShapeType(context), vm =>
+        {
+            vm.LegalName = part.LegalName;
+            vm.TaxId = part.TaxId;
+            vm.Email = part.Email;
+        })
+        .Location("Detail", "Content:1");
+    }
 }
