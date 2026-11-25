@@ -1,0 +1,19 @@
+@model CpaClientManager.Core.ViewModels.ClientPartViewModel
+
+<div class="mb-3">
+    <label asp-for="LegalName" class="form-label"></label>
+    <input asp-for="LegalName" class="form-control" />
+    <span asp-validation-for="LegalName" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="TaxId" class="form-label"></label>
+    <input asp-for="TaxId" class="form-control" />
+    <span asp-validation-for="TaxId" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Email" class="form-label"></label>
+    <input asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+</div>
