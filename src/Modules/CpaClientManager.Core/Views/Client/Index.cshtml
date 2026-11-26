@@ -1,0 +1,8 @@
+@model IEnumerable<CpaClientManager.Core.ViewModels.ClientPartViewModel>
+
+<h1>Clients</h1>
+@foreach(var Client in Model) {
+    <div class="client-details">
+        <p>@Client.LegalName</p>
+    </div>
+}
