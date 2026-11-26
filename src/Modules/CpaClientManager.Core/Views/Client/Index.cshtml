@@ -1,8 +1,10 @@
-@model IEnumerable<CpaClientManager.Core.ViewModels.ClientPartViewModel>
+@model IEnumerable<CpaClientManager.Core.ViewModels.ClientListItemViewModel>
 
 <h1>Clients</h1>
-@foreach(var Client in Model) {
+@foreach(var client in Model) {
     <div class="client-details">
-        <p>@Client.LegalName</p>
+        <a href="@Url.RouteUrl(new { area = "OrchardCore.Contents", controller = "Item", action = "Display", contentItemId = client.ContentItemId })">
+        @client.LegalName
+        </a>
     </div>
 }

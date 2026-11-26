@@ -26,8 +26,9 @@ public sealed class ClientController : Controller
         var viewModels = contentItems.Select(item =>
         {
             var part = item.As<ClientPart>();
-            return new ClientPartViewModel
+            return new ClientListItemViewModel
             {
+                ContentItemId = item.ContentItemId,
                 LegalName = part.LegalName,
                 TaxId = part.TaxId,
                 Email = part.Email
