@@ -8,5 +8,5 @@ using OrchardCore.Modules.Manifest;
     Category = "Content Management",
     // Contents provides the content services (IContentDefinitionManager, admin content list),
     // Title provides the TitlePart that the Client content type uses.
-    Dependencies = new[] { "OrchardCore.Contents", "OrchardCore.Title" }
+    Dependencies = new[] { "OrchardCore.Contents"}
 )]

@@ -35,4 +35,12 @@ public sealed class Migrations : DataMigration
 
         return 2;
     }
+
+    public async Task<int> UpdateFrom2Async()
+    {
+        await _contentDefinitionManager.AlterTypeDefinitionAsync("Client", type => type
+            .RemovePart("TitlePart"));
+
+        return 3;
+    }
 }
